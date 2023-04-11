@@ -1,0 +1,74 @@
+---
+import Menu from "./Menu.astro";
+---
+
+<header>
+  <div class="column1">
+    <img class="logo" src="../public/assets/logo.webp" alt="logo" />
+  </div>
+
+  <div class="column3">
+    <Menu />
+  </div>
+  <div class="arrow-button"></div>
+</header>
+<script src="../scripts/arrow.js"></script>
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 95%;
+    height: 780px;
+    background: url("../public/assets/royal_img.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    border-radius: 2rem;
+  }
+
+  .column1 {
+    max-width: 100%;
+    text-align: left;
+  }
+  img {
+    max-width: 150px;
+  }
+  .column2 {
+    max-width: 100%;
+    text-align: center;
+  }
+  .column3 {
+    max-width: 100%;
+    align-items: right;
+  }
+  .arrow-button {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px; /* half of the height */
+    margin-left: -25px; /* half of the width */
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    animation: move-up-down 2s ease-in-out infinite;
+  }
+
+  @keyframes move-up-down {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .arrow-button:hover {
+    transform: scale(1.2);
+  }
+</style>
