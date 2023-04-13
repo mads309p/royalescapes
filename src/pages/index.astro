@@ -3,3 +3,277 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Kune" />
+<body>
+    <main>
+        <div>
+            <img src="assets/coin.svg" alt="My Image" class="scroll-image rotate-image">
+        </div>
+        <div>
+            <img src="assets/crown.svg" alt="My Image" class="scroll-image2 rotate-image">
+        </div>
+        <div>
+            <img src="assets/skull.svg" alt="My Image" class="scroll-image3 rotate-image">
+        </div>
+        <div>
+            <img src="assets/chess.svg" alt="My Image" class="scroll-image4 rotate-image">
+        </div>
+        <div>
+            <p class="quote">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, illo molestiae? Aliquam
+                dolorem illum
+                praesentium, delectus voluptates aperiam. Commodi modi soluta velit facere explicabo autem ipsam quo
+                asperiores illo officiis.</p>
+        </div>
+
+        <div>
+            <div class="video"></div>
+        </div>
+
+        <div>
+            <h2>Variatians</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="/assets/Dungeon.png" alt="Product Image" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Product Title</h3>
+                        <p class="card-text">Product description goes here.</p>
+                        <button class="card-button">Buy now</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/Cabinet.png" alt="Product Image" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Product Title</h3>
+                        <p class="card-text">Product description goes here.</p>
+                        <button class="card-button">Buy now</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="/assets/Playroom.png" alt="Product Image" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">Product Title</h3>
+                        <p class="card-text">Product description goes here.</p>
+                        <button class="card-button">Buy now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        const images = document.querySelectorAll('.scroll-image, .scroll-image2, .scroll-image3, .scroll-image4');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            images.forEach(image => {
+                if (scrollPosition > 100) { /* change this value to adjust the scroll position */
+                    image.classList.add('active');
+                } else {
+                    image.classList.remove('active');
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>
+
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        padding: 0;
+        margin-left: 0;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .quote {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        width: 65ch;
+        height: 100vh;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 1.5;
+        color: lightgray;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 54px;
+        color: lightgray;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 5em;
+    }
+
+    .scroll-image {
+        position: relative;
+        left: 5%;
+        top: 150;
+        transition: top 13s ease-in-out;
+        opacity: 30%;
+        max-width: 50%;
+    }
+
+    .scroll-image2 {
+        position: relative;
+        left: 30%;
+        top: 150;
+        transition: top 12s ease-in-out;
+        opacity: 30%;
+        scale: 1.4;
+    }
+
+    .scroll-image3 {
+        position: relative;
+        left: 55%;
+        top: -150;
+        transition: top 15s ease-in-out;
+        opacity: 30%;
+    }
+
+    .scroll-image4 {
+        position: relative;
+        left: 80%;
+        top: -150px;
+        transition: top 15s ease-in-out;
+        opacity: 30%;
+    }
+
+    .scroll-image:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image.active {
+        top: 350px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .scroll-image2:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image2.active {
+        top: 350px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .scroll-image3:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image3.active {
+        top: 350px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .scroll-image4:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image4.active {
+        top: 50px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .rotate-image {
+        animation: rotate 30s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .video {
+        background-color: grey;
+        width: 1050px;
+        height: 640px;
+        margin: auto;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+        background-color: lightgray;
+        margin: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60px;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card-title {
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        color: rgb(50, 50, 50);
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card-button {
+        background-color: white;
+        color: #3f3f3f;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .card-button:hover {
+        background-color: #ddd;
+    }
+</style>
