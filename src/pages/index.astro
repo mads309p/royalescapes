@@ -60,199 +60,198 @@ import Layout from "../layouts/Layout.astro";
 <script src="../scripts/scroll.js"></script>
 
 <style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
-
-  body {
-    padding: 0;
-    margin-left: 0;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    background-color: black;
-  }
-
-  .quote {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    width: 65ch;
-    height: 100vh;
-    margin: 0 auto;
-    font-weight: bold;
-    font-size: 34px;
-    line-height: 1.5;
-    color: lightgray;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 54px;
-    color: lightgray;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    padding-top: 5em;
-  }
-
-  .scroll-image {
-    position: absolute;
-    left: 5%;
-    top: 150;
-    transition: top 13s ease-in-out;
-    opacity: 30%;
-    max-width: 50%;
-  }
-
-  .scroll-image2 {
-    position: absolute;
-    left: 30%;
-    top: 150;
-    transition: top 12s ease-in-out;
-    opacity: 30%;
-    scale: 1.4;
-  }
-
-  .scroll-image3 {
-    position: absolute;
-    left: 55%;
-    top: -150;
-    transition: top 15s ease-in-out;
-    opacity: 30%;
-  }
-
-  .scroll-image4 {
-    position: absolute;
-    left: 80%;
-    top: -150px;
-    transition: top 15s ease-in-out;
-    opacity: 30%;
-  }
-
-  .scroll-image:hover {
-    opacity: 60%;
-  }
-
-  .scroll-image.active {
-    top: 350px;
-    /* change this value to adjust the distance the image moves */
-  }
-
-  .scroll-image2:hover {
-    opacity: 60%;
-  }
-
-  .scroll-image2.active {
-    top: 350px;
-    /* change this value to adjust the distance the image moves */
-  }
-
-  .scroll-image3:hover {
-    opacity: 60%;
-  }
-
-  .scroll-image3.active {
-    top: 350px;
-    /* change this value to adjust the distance the image moves */
-  }
-
-  .scroll-image4:hover {
-    opacity: 60%;
-  }
-
-  .scroll-image4.active {
-    top: 50px;
-    /* change this value to adjust the distance the image moves */
-  }
-
-  .rotate-image {
-    animation: rotate 30s linear infinite;
-  }
-
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
+    * {
+        padding: 0;
+        margin: 0;
     }
 
-    to {
-      transform: rotate(360deg);
+    main {
+        padding: 0;
+        margin-left: 0;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: black;
     }
-  }
 
-  .video {
-    background-color: grey;
-    width: 1050px;
-    height: 640px;
-    margin: auto;
-  }
+    .quote {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        width: 65ch;
+        height: 100vh;
+        margin: 0 auto;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 1.5;
+        color: lightgray;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-  .cards {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
-    margin: 0 auto;
-  }
+    h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: 54px;
+        color: lightgray;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        padding-top: 5em;
+    }
 
-  .card {
-    width: 300px;
-    height: 500px;
-    background-color: lightgray;
-    margin: 0 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 60px;
-  }
+    .scroll-image {
+        position: absolute;
+        left: 5%;
+        top: 0;
+        transition: top 13s ease-in-out;
+        opacity: 40%;
+    }
 
-  .card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
+    .scroll-image2 {
+        position: absolute;
+        left: 30%;
+        top: 0;
+        transition: top 12s ease-in-out;
+        opacity: 30%;
+        scale: 1.4;
+    }
 
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
+    .scroll-image3 {
+        position: absolute;
+        left: 55%;
+        top: 0;
+        transition: top 15s ease-in-out;
+        opacity: 30%;
+    }
 
-  .card-title {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
+    .scroll-image4 {
+        position: absolute;
+        left: 80%;
+        top: 0;
+        transition: top 15s ease-in-out;
+        opacity: 30%;
+    }
 
-  .card-text {
-    color: rgb(50, 50, 50);
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 20px;
-  }
+    .scroll-image:hover {
+        opacity: 60%;
+    }
 
-  .card-button {
-    background-color: white;
-    color: #3f3f3f;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s ease-in-out;
-  }
+    .scroll-image.active {
+        top: 350px;
+        /* change this value to adjust the distance the image moves */
+    }
 
-  .card-button:hover {
-    background-color: #ddd;
-  }
+    .scroll-image2:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image2.active {
+        top: 350px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .scroll-image3:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image3.active {
+        top: 350px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .scroll-image4:hover {
+        opacity: 60%;
+    }
+
+    .scroll-image4.active {
+        top: 50px;
+        /* change this value to adjust the distance the image moves */
+    }
+
+    .rotate-image {
+        animation: rotate 30s linear infinite;
+    }
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .video {
+        background-color: grey;
+        width: 1050px;
+        height: 640px;
+        margin: auto;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        margin: 0 auto;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+        margin: 0 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 60px;
+    }
+
+    .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+        filter: invert(100%);
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card-title {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .card-button {
+        background-color: #EF9786;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        /* font-weight: bold; */
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .card-button:hover {
+        background-color: #ddd;
+    }
 </style>
