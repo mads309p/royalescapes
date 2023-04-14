@@ -6,6 +6,10 @@ import Layout from "../layouts/Layout.astro";
 
 <main>
   <div>
+    <p class="quote">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, illo molestiae? Aliquam dolorem illum praesentium, delectus voluptates aperiam. Commodi modi soluta velit facere explicabo autem ipsam quo asperiores illo officiis.
+    </p>
+        <div>
     <img src="../public/assets/coin.svg" alt="My Image" class="scroll-image rotate-image" />
   </div>
   <div>
@@ -17,10 +21,6 @@ import Layout from "../layouts/Layout.astro";
   <div>
     <img src="../public/assets/chess.svg" alt="My Image" class="scroll-image4 rotate-image" />
   </div>
-  <div>
-    <p class="quote">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, illo molestiae? Aliquam dolorem illum praesentium, delectus voluptates aperiam. Commodi modi soluta velit facere explicabo autem ipsam quo asperiores illo officiis.
-    </p>
   </div>
 
   <div>
@@ -71,7 +71,6 @@ import Layout from "../layouts/Layout.astro";
         display: grid;
         justify-items: center;
         align-items: center;
-        background-color: black;
     }
 
     .quote {
@@ -79,7 +78,7 @@ import Layout from "../layouts/Layout.astro";
         display: flex;
         align-items: center;
         width: 65ch;
-        height: 100vh;
+        height: 70vh;
         margin: 0 auto;
         font-weight: bold;
         font-size: 34px;
@@ -101,36 +100,36 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .scroll-image {
-        position: absolute;
-        left: 5%;
-        top: 0;
+        position: relative;
+        left: 90px;
+        top: -300px;
         transition: top 13s ease-in-out;
         opacity: 40%;
     }
 
     .scroll-image2 {
-        position: absolute;
-        left: 30%;
-        top: 0;
+        position: relative;
+        left: 350px;
+        top: -400px;
         transition: top 12s ease-in-out;
-        opacity: 30%;
+        opacity: 40%;
         scale: 1.4;
     }
 
     .scroll-image3 {
-        position: absolute;
-        left: 55%;
-        top: 0;
-        transition: top 15s ease-in-out;
-        opacity: 30%;
+        position: relative;
+        left: 650px;
+        top: -850px;
+        transition: top 11s ease-in-out;
+        opacity: 40%;
     }
 
     .scroll-image4 {
-        position: absolute;
-        left: 80%;
-        top: 0;
-        transition: top 15s ease-in-out;
-        opacity: 30%;
+        position: relative;
+        left: 950px;
+        top: -800px;
+        transition: top 10s ease-in-out;
+        opacity: 40%;
     }
 
     .scroll-image:hover {
@@ -147,7 +146,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .scroll-image2.active {
-        top: 350px;
+        top: -50px;
         /* change this value to adjust the distance the image moves */
     }
 
@@ -156,7 +155,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .scroll-image3.active {
-        top: 350px;
+        top: -100px;
         /* change this value to adjust the distance the image moves */
     }
 
@@ -165,7 +164,7 @@ import Layout from "../layouts/Layout.astro";
     }
 
     .scroll-image4.active {
-        top: 50px;
+        top: -250px;
         /* change this value to adjust the distance the image moves */
     }
 
