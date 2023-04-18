@@ -4,13 +4,13 @@ import Menu from "./Menu.astro";
 
 <header>
   <div class="column1">
-    <img class="logo" src="../public/assets/logo.webp" alt="logo" />
+    <img class="logo" src="../public/assets/RE-logo.png" alt="logo" />
   </div>
 
   <div class="column3">
     <Menu />
   </div>
-  <div class="arrow-button"></div>
+  <div class="arrow-button"><img src="../assets/Arrow.svg" alt=""></div>
 </header>
 <script src="../scripts/arrow.js"></script>
 <style>
@@ -20,7 +20,7 @@ import Menu from "./Menu.astro";
     padding: 2rem;
     width: 95%;
     height: 780px;
-    background: url("../public/assets/royal_img.jpeg") no-repeat center center fixed;
+    background: url("../public/assets/headerbg.png") no-repeat center center;
     background-size: cover;
     border-radius: 2rem;
   }
@@ -50,10 +50,15 @@ import Menu from "./Menu.astro";
     margin-left: -25px; /* half of the width */
     border: none;
     outline: none;
-    background-color: white;
+   /* background-color: white; */
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     animation: move-up-down 2s ease-in-out infinite;
+    scale: 0.5;
+  }
+
+  .logo{
+    filter: invert(100%)
   }
 
   @keyframes move-up-down {
