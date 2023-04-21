@@ -7,273 +7,282 @@ import Layout from "../layouts/Layout.astro";
 <main>
   <div>
     <p class="quote">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, illo molestiae? Aliquam dolorem illum praesentium, delectus voluptates aperiam. Commodi modi soluta velit facere explicabo autem ipsam quo asperiores illo officiis.
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, illo molestiae? Aliquam dolorem illum praesentium,
+      delectus voluptates aperiam. Commodi modi soluta velit facere explicabo autem ipsam quo asperiores illo officiis.
     </p>
-        <div class="inline">
-    <img src="../public/assets/coin.svg" alt="My Image" class="scroll-image rotate-image" />
-  </div>
-  <div class="inline">
-    <img src="../public/assets/crown.svg" alt="My Image" class="scroll-image2 rotate-image" />
-  </div>
-  <div class="inline">
-    <img src="../public/assets/skull.svg" alt="My Image" class="scroll-image3 rotate-image" />
-  </div>
-  <div class="inline">
-    <img src="../public/assets/chess.svg" alt="My Image" class="scroll-image4 rotate-image" />
-  </div>
+    <div class="inline">
+      <img src="../public/assets/coin.svg" alt="My Image" class="scroll-image rotate-image" />
+    </div>
+    <div class="inline">
+      <img src="../public/assets/crown.svg" alt="My Image" class="scroll-image2 rotate-image" />
+    </div>
+    <div class="inline">
+      <img src="../public/assets/skull.svg" alt="My Image" class="scroll-image3 rotate-image" />
+    </div>
+    <div class="inline">
+      <img src="../public/assets/chess.svg" alt="My Image" class="scroll-image4 rotate-image" />
+    </div>
   </div>
 
   <div>
-    <div class="video"></div>
-  </div>
-
-<div id="cards-section">
-  <h2>Variatians</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="/assets/Dungeon.png" alt="Product Image" class="card-image" />
-      <div class="card-body">
-        <h3 class="card-title">Product Title</h3>
-        <p class="card-text">Product description goes here.</p>
-        <button class="card-button">Buy now</button>
-      </div>
-    </div>
-    <div class="card">
-      <img src="/assets/Cabinet.png" alt="Product Image" class="card-image" />
-      <div class="card-body">
-        <h3 class="card-title">Product Title</h3>
-        <p class="card-text">Product description goes here.</p>
-        <button class="card-button">Buy now</button>
-      </div>
-    </div>
-    <div class="card">
-      <img src="/assets/Playroom.png" alt="Product Image" class="card-image" />
-      <div class="card-body">
-        <h3 class="card-title">Product Title</h3>
-        <p class="card-text">Product description goes here.</p>
-        <button class="card-button">Buy now</button>
-      </div>
+    <div class="video">
+      <iframe
+        width="1050px"
+        height="640px"
+        src="https://www.youtube.com/embed/ZlkySP1PwsA"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
     </div>
   </div>
 
+  <div id="cards-section">
+    <h2>Variatians</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="/assets/Dungeon.png" alt="Product Image" class="card-image" />
+        <div class="card-body">
+          <h3 class="card-title">Product Title</h3>
+          <p class="card-text">Product description goes here.</p>
+          <button class="card-button">Buy now</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/Cabinet.png" alt="Product Image" class="card-image" />
+        <div class="card-body">
+          <h3 class="card-title">Product Title</h3>
+          <p class="card-text">Product description goes here.</p>
+          <button class="card-button">Buy now</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="/assets/Playroom.png" alt="Product Image" class="card-image" />
+        <div class="card-body">
+          <h3 class="card-title">Product Title</h3>
+          <p class="card-text">Product description goes here.</p>
+          <button class="card-button">Buy now</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 <script src="../scripts/scroll.js"></script>
 <script src="../scripts/scrollcard.js"></script>
 
 <style>
-    * {
-        padding: 0;
-        margin: 0;
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  main {
+    padding: 0;
+    margin-left: 0;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .quote {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 65ch;
+    height: 70vh;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 1.5;
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 54px;
+    color: lightgray;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 2em;
+  }
+
+  .scroll-image {
+    position: relative;
+    left: 90px;
+    top: -500px;
+    transition: top 4s ease-in-out;
+    opacity: 40%;
+  }
+
+  .scroll-image2 {
+    position: relative;
+    left: 220px;
+    top: -500px;
+    transition: top 3s ease-in-out;
+    opacity: 40%;
+    scale: 1.4;
+  }
+
+  .scroll-image3 {
+    position: relative;
+    left: 400px;
+    top: -550px;
+    transition: top 3s ease-in-out;
+    opacity: 40%;
+  }
+
+  .scroll-image4 {
+    position: relative;
+    left: 600px;
+    top: -500px;
+    transition: top 4s ease-in-out;
+    opacity: 40%;
+  }
+
+  .scroll-image:hover {
+    opacity: 60%;
+  }
+
+  .scroll-image.active {
+    top: -100px;
+    /* change this value to adjust the distance the image moves */
+  }
+
+  .scroll-image2:hover {
+    opacity: 60%;
+  }
+
+  .scroll-image2.active {
+    top: -50px;
+    /* change this value to adjust the distance the image moves */
+  }
+
+  .scroll-image3:hover {
+    opacity: 60%;
+  }
+
+  .scroll-image3.active {
+    top: -100px;
+    /* change this value to adjust the distance the image moves */
+  }
+
+  .scroll-image4:hover {
+    opacity: 60%;
+  }
+
+  .scroll-image4.active {
+    top: -150px;
+    /* change this value to adjust the distance the image moves */
+  }
+
+  .rotate-image {
+    animation: rotate 30s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
     }
 
-    main {
-        padding: 0;
-        margin-left: 0;
-        display: grid;
-        justify-items: center;
-        align-items: center;
+    to {
+      transform: rotate(360deg);
     }
+  }
 
-    .quote {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        width: 65ch;
-        height: 70vh;
-        margin: 0 auto;
-        font-weight: bold;
-        font-size: 34px;
-        line-height: 1.5;
-        color: lightgray;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+  .video {
+    background-color: grey;
+    width: 1050px;
+    height: 640px;
+    margin: auto;
+  }
 
-    h2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-weight: bold;
-        font-size: 54px;
-        color: lightgray;
-        margin-bottom: 0;
-        padding-bottom: 0;
-        padding-top: 2em;
-    }
+  .inline {
+    display: inline;
+  }
 
-    .scroll-image {
-        position: relative;
-        left: 90px;
-        top: -500px;
-        transition: top 4s ease-in-out;
-        opacity: 40%;
-    }
-
-    .scroll-image2 {
-        position: relative;
-        left: 220px;
-        top: -500px;
-        transition: top 3s ease-in-out;
-        opacity: 40%;
-        scale: 1.4;
-    }
-
-    .scroll-image3 {
-        position: relative;
-        left: 400px;
-        top: -550px;
-        transition: top 3s ease-in-out;
-        opacity: 40%;
-    }
-
-    .scroll-image4 {
-        position: relative;
-        left: 600px;
-        top: -500px;
-        transition: top 4s ease-in-out;
-        opacity: 40%;
-    }
-
-    .scroll-image:hover {
-        opacity: 60%;
-    }
-
-    .scroll-image.active {
-        top: -100px;
-        /* change this value to adjust the distance the image moves */
-    }
-
-    .scroll-image2:hover {
-        opacity: 60%;
-    }
-
-    .scroll-image2.active {
-        top: -50px;
-        /* change this value to adjust the distance the image moves */
-    }
-
-    .scroll-image3:hover {
-        opacity: 60%;
-    }
-
-    .scroll-image3.active {
-        top: -100px;
-        /* change this value to adjust the distance the image moves */
-    }
-
-    .scroll-image4:hover {
-        opacity: 60%;
-    }
-
-    .scroll-image4.active {
-        top: -150px;
-        /* change this value to adjust the distance the image moves */
-    }
-
-    .rotate-image {
-        animation: rotate 30s linear infinite;
-    }
-
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-
-        to {
-            transform: rotate(360deg);
-        }
-    }
-
-    .video {
-        background-color: grey;
-        width: 1050px;
-        height: 640px;
-        margin: auto;
-    }
-
-        .inline{
-        display: inline;
-    }
-
-.cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 55vh;
-  margin: 0 auto;
-  opacity: 0;
-}
-
-.card {
-  width: 300px;
-  height: 500px;
-  margin: 0 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 60px;
-}
-
-.card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  filter: invert(100%);
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.card-title {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.card-text {
-  color: white;
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.card-button {
-  background-color: #EF9786;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.card-button:hover {
-  background-color: #ddd;
-}
-
-@keyframes cardPopUp {
-  0% {
-    transform: translateY(70%);
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    margin: 0 auto;
     opacity: 0;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  .card {
+    width: 300px;
+    height: 500px;
+    margin: 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
   }
-}
 
-/* Apply the animation to the cards section when it's scrolled to */
-.cards.show {
+  .card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    filter: invert(100%);
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .card-title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .card-button {
+    background-color: #ef9786;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card-button:hover {
+    background-color: #ddd;
+  }
+
+  @keyframes cardPopUp {
+    0% {
+      transform: translateY(70%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Apply the animation to the cards section when it's scrolled to */
+  .cards.show {
     opacity: 1;
-  animation: cardPopUp 1.5s ease-out forwards;
-}
-
+    animation: cardPopUp 1.5s ease-out forwards;
+  }
 </style>
