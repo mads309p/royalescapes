@@ -40,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
 </main>
 
 <div id="cards-section">
-  <h2>Variatians</h2>
+  <h2>VARIATIONS</h2>
   <div class="cards">
     <div class="card">
       <img src="/assets/Dungeon.png" alt="Product Image" class="card-image" />
@@ -73,6 +73,11 @@ import Layout from "../layouts/Layout.astro";
 <script src="../scripts/scrollcard.js"></script>
 
 <style>
+  @font-face {
+    font-family: "dosis";
+    src: url("../public/fonts/Dosis-VariableFont_wght.ttf") format("ttf");
+  }
+  @import url("https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&display=swap");
   * {
     padding: 0;
     margin: 0;
@@ -104,7 +109,8 @@ import Layout from "../layouts/Layout.astro";
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
     font-size: 54px;
     color: lightgray;
     margin-bottom: 0;
