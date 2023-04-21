@@ -24,7 +24,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 
-  <div>
+  <div class="video-frame">
     <div class="video">
       <iframe
         width="1050px"
@@ -35,38 +35,40 @@ import Layout from "../layouts/Layout.astro";
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
     </div>
+    <img src="../public/assets/videoframe.webp" alt="videoframe" />
   </div>
+</main>
 
-  <div id="cards-section">
-    <h2>Variatians</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="/assets/Dungeon.png" alt="Product Image" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">Product Title</h3>
-          <p class="card-text">Product description goes here.</p>
-          <button class="card-button">Buy now</button>
-        </div>
+<div id="cards-section">
+  <h2>Variatians</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="/assets/Dungeon.png" alt="Product Image" class="card-image" />
+      <div class="card-body">
+        <h3 class="card-title">Product Title</h3>
+        <p class="card-text">Product description goes here.</p>
+        <button class="card-button">Buy now</button>
       </div>
-      <div class="card">
-        <img src="/assets/Cabinet.png" alt="Product Image" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">Product Title</h3>
-          <p class="card-text">Product description goes here.</p>
-          <button class="card-button">Buy now</button>
-        </div>
+    </div>
+    <div class="card">
+      <img src="/assets/Cabinet.png" alt="Product Image" class="card-image" />
+      <div class="card-body">
+        <h3 class="card-title">Product Title</h3>
+        <p class="card-text">Product description goes here.</p>
+        <button class="card-button">Buy now</button>
       </div>
-      <div class="card">
-        <img src="/assets/Playroom.png" alt="Product Image" class="card-image" />
-        <div class="card-body">
-          <h3 class="card-title">Product Title</h3>
-          <p class="card-text">Product description goes here.</p>
-          <button class="card-button">Buy now</button>
-        </div>
+    </div>
+    <div class="card">
+      <img src="/assets/Playroom.png" alt="Product Image" class="card-image" />
+      <div class="card-body">
+        <h3 class="card-title">Product Title</h3>
+        <p class="card-text">Product description goes here.</p>
+        <button class="card-button">Buy now</button>
       </div>
     </div>
   </div>
-</main>
+</div>
+
 <script src="../scripts/scroll.js"></script>
 <script src="../scripts/scrollcard.js"></script>
 
@@ -194,16 +196,30 @@ import Layout from "../layouts/Layout.astro";
   }
 
   .video {
-    background-color: grey;
+    position: relative;
+    background: url(src="../public/assets/videoframe.webp") no repeat center center;
+    background-size: cover;
     width: 1050px;
     height: 640px;
+    overflow: hidden;
     margin: auto;
   }
 
+  .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
   .inline {
     display: inline;
   }
-
+  #cards-section {
+    overflow: hidden;
+    height: 640px;
+  }
   .cards {
     display: flex;
     justify-content: center;
