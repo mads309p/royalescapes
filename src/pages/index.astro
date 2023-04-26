@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Royale Escapes" />
+<Layout title="Royal Escapes" />
 
 <main>
   <div>
@@ -88,7 +88,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </div>
-
+<div class="footer"><p>*** Dette er et skoleprojekt ***</p></div>
 <script src="../scripts/scroll.js"></script>
 <script src="../scripts/scrollcard.js"></script>
 
@@ -109,6 +109,20 @@ import Layout from "../layouts/Layout.astro";
     display: grid;
     justify-items: center;
     align-items: center;
+  }
+
+  .footer {
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    position: fixed;
+    background-color: rgb(239, 85, 85);
+  }
+
+  .footer p {
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
   }
 
   .quote {
